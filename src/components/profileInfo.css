@@ -1,0 +1,336 @@
+/* Top band */
+.top-band {
+    height: 60px;
+    background: linear-gradient(135deg, #2e86ab 0%, #1e5f7a 100%);
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+/* Main content area */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: white;
+    position: relative;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.search-box {
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 300px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-box:focus {
+    border-color: #2e86ab;
+}
+
+.profile-circle {
+    width: 50px;
+    height: 50px;
+    background: #2e86ab;
+    border-radius: 50%;
+}
+
+/* Profile Information Section */
+.profile-section {
+    margin-bottom: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.demographics-section,
+.contact-section,
+.insurance-section,
+.allergy-section {
+    margin-bottom: 20px;
+}
+
+.demographics-btn,
+.contact-btn,
+.insurance-btn,
+.allergy-btn {
+    background: #2e86ab;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(46, 134, 171, 0.2);
+}
+
+.demographics-btn:hover,
+.contact-btn:hover,
+.insurance-btn:hover,
+.allergy-btn:hover {
+    background: #1e5f7a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(46, 134, 171, 0.3);
+}
+
+.demographics-display,
+.contact-display,
+.insurance-display,
+.allergy-display {
+    background: #f8f9fa;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #495057;
+    font-size: 16px;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.info-value {
+    color: #212529;
+    font-size: 16px;
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* Insurance Information Styles */
+.insurance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.insurance-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #212529;
+    line-height: 1.6;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.insurance-info p:last-child {
+    border-bottom: none;
+}
+
+.insurance-info strong {
+    font-weight: 600;
+    color: #495057;
+    display: inline-block;
+    min-width: 200px;
+}
+
+/* Allergy Styles */
+.allergy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.allergy-column {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.allergy-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.allergy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.allergy-list li {
+    padding: 8px 0;
+    color: #212529;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid #f1f3f4;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.allergy-list li:last-child {
+    border-bottom: none;
+}
+
+.allergy-list strong {
+    font-weight: 600;
+    color: #495057;
+    min-width: 120px;
+    margin-right: 10px;
+}
+
+/* Next button section */
+.next-section {
+    text-align: right;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.next-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+}
+
+.next-btn:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .content {
+        padding: 20px;
+        height: auto;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .search-container {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .info-label {
+        min-width: auto;
+        font-weight: 600;
+    }
+    
+    .allergy-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .demographics-display,
+    .contact-display,
+    .insurance-display,
+    .allergy-display {
+        padding: 20px;
+    }
+    
+    .insurance-info strong {
+        min-width: auto;
+        display: block;
+        margin-bottom: 4px;
+    }
+}

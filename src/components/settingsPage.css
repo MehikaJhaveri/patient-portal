@@ -1,14 +1,33 @@
-/* Medical Records container */
-.medical-records-container {
+/* Top band */
+.top-band {
+    height: 60px;
+    background: linear-gradient(135deg, #2e86ab 0%, #1e5f7a 100%);
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
+}
+
+/* Settings page wrapper */
+.settings-page {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+}
+
+/* Main content area */
+.content {
     flex: 1;
     padding: 40px;
     background: white;
     position: relative;
     overflow-y: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    height: calc(100vh - 60px);
 }
 
-/* Content header */
 .content-header {
     display: flex;
     justify-content: space-between;
@@ -50,41 +69,29 @@
     border-radius: 50%;
 }
 
-/* Tabs */
-.tabs {
-    display: flex;
-    gap: 0;
+/* Profile Information Section */
+.profile-section {
     margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
 }
 
-.tab {
-    padding: 15px 25px;
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: #666;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
-    font-weight: 500;
-}
-
-.tab.active {
-    color: #2e86ab;
-    border-bottom-color: #2e86ab;
+.section-title {
+    font-size: 24px;
     font-weight: 600;
-}
-
-.tab:hover:not(.active) {
-    color: #2e86ab;
-}
-
-/* Vitals Section */
-.vitals-section {
+    color: #333;
     margin-bottom: 25px;
 }
 
-.vitals-btn {
+.demographics-section,
+.contact-section,
+.insurance-section,
+.allergy-section {
+    margin-bottom: 20px;
+}
+
+.demographics-btn,
+.contact-btn,
+.insurance-btn,
+.allergy-btn {
     background: #2e86ab;
     color: white;
     border: none;
@@ -94,13 +101,20 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin-bottom: 20px;
 }
 
-.vitals-btn:hover {
+.demographics-btn:hover,
+.contact-btn:hover,
+.insurance-btn:hover,
+.allergy-btn:hover {
     background: #1e5f7a;
 }
 
-.vitals-display {
+.demographics-display,
+.contact-display,
+.insurance-display,
+.allergy-display {
     background: #f8f9fa;
     padding: 25px;
     border: 1px solid #ddd;
@@ -108,75 +122,85 @@
     margin-bottom: 25px;
 }
 
-.vitals-list {
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 8px 0;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.info-value {
+    color: #333;
+    font-size: 16px;
+    flex: 1;
+}
+
+/* Insurance Information Styles */
+.insurance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.insurance-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.insurance-info strong {
+    font-weight: 500;
+}
+
+/* Allergy Styles */
+.allergy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.allergy-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.allergy-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0 0 15px 0;
+}
+
+.allergy-list {
     list-style: disc;
     padding-left: 20px;
     margin: 0;
 }
 
-.vitals-list li {
+.allergy-list li {
     padding: 5px 0;
     color: #333;
     font-size: 15px;
     line-height: 1.5;
 }
 
-/* Medical Records List */
-.medical-records-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    max-height: 60vh;
-    overflow-y: scroll;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.medical-record-item {
-    background: white;
-    padding: 25px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.medical-record-item:last-child {
-    border-bottom: none;
-}
-
-.record-content {
-    flex: 1;
-}
-
-.record-content p {
-    margin: 0 0 12px 0;
-    font-size: 16px;
-    color: #333;
-    font-weight: normal;
-    line-height: 1.4;
-}
-
-.record-content p:last-child {
-    margin-bottom: 0;
-}
-
-.record-content strong {
-    font-weight: 600;
-}
-
-.record-date {
-    font-weight: 600;
-    font-size: 16px;
-    color: #333;
-    margin-left: 20px;
-    white-space: nowrap;
-    align-self: flex-start;
+.allergy-list strong {
+    font-weight: 500;
 }
 
 /* Next button section */
@@ -203,7 +227,11 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .medical-records-container {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .content {
         padding: 20px;
     }
     
@@ -227,13 +255,17 @@
         font-size: 28px;
     }
     
-    .medical-record-item {
+    .info-row {
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
     
-    .record-date {
-        margin-left: 0;
-        align-self: flex-end;
+    .info-label {
+        min-width: auto;
+    }
+    
+    .allergy-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

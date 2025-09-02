@@ -1,0 +1,130 @@
+.sidebar {
+  width: 280px;
+  background: #e8f4f8;
+  border-right: 1px solid #d1e8f0;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #d1e8f0;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: #2e86ab;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2e86ab;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 25px;
+  color: #2e86ab;
+  font-weight: 500;
+  font-size: 18px;
+  border-bottom: 1px solid #d1e8f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #d1e8f0;
+}
+
+.nav-item.active {
+  background-color: #d1e8f0;
+  color: #1e5f7a;
+  font-weight: 600;
+}
+
+.settings-subnav {
+  border-top: 1px solid #d1e8f0;
+  background: #f0f8fc;
+  flex-grow: 1; /* This allows the settings section to expand */
+}
+
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 35px;
+  color: #2e86ab;
+  font-weight: 400;
+  font-size: 16px;
+  border-bottom: 1px solid #d1e8f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.settings-nav-item:hover {
+  background-color: #e0f0f8;
+}
+
+.settings-nav-item.active {
+  background-color: #d1e8f0;
+  color: #1e5f7a;
+  font-weight: 500;
+}
+
+/* Account Security container - this ensures proper nesting */
+.account-security-container {
+  position: relative;
+}
+
+.nav-item-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Toggle arrow */
+.toggle-arrow {
+  font-size: 14px;
+  margin-left: auto;
+  color: #2e86ab;
+  cursor: pointer;
+}
+
+/* Sub-options (nested under Account Security) */
+.sub-options {
+  background: #f8fcff;
+  border-left: 3px solid #d1e8f0;
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove padding from container */
+}
+
+.sub-options .settings-nav-item {
+  font-size: 14px;
+  padding: 10px 35px 10px 55px; /* Increased left padding for indentation */
+  color: #1e5f7a;
+  border-bottom: 1px solid #e8f4f8;
+}
+
+.sub-options .settings-nav-item:hover {
+  background-color: #eaf4f8;
+}
+
+/* Logout button - positioned at the bottom */
+.logout-button {
+  margin-top: auto; /* This pushes the logout to the bottom */
+}
