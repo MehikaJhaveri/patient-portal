@@ -43,9 +43,7 @@ const Sidebar = () => {
       >
         <div className="nav-item-content">
           <div className="nav-text">Settings</div>
-          <span className="toggle-arrow">
-            {showSettings ? "▲" : "▼"}
-          </span>
+          <span className="toggle-arrow">{showSettings ? "▲" : "▼"}</span>
         </div>
       </div>
 
@@ -77,34 +75,36 @@ const Sidebar = () => {
             </div>
 
             {/* Nested sub-options */}
-            {showSecurityOptions && (
-              <div className="sub-options">
-                <div
-                  className="settings-nav-item"
-                  onClick={() => navigate("/settings/account-security")}
-                >
-                  <div className="nav-item-content">
-                    <div className="nav-text">Change Password</div>
+            {/* Nested sub-options */}
+              {showSecurityOptions && (
+                <div className="sub-options">
+                  <div
+                    className="settings-nav-item"
+                    onClick={() => navigate("/settings/account-security/change-password")}
+                  >
+                    <div className="nav-item-content">
+                      <div className="nav-text">Change Password</div>
+                    </div>
+                  </div>
+                  <div
+                    className="settings-nav-item"
+                    onClick={() => navigate("/settings/account-security/two-factor")}
+                  >
+                    <div className="nav-item-content">
+                      <div className="nav-text">Two-Factor Authentication</div>
+                    </div>
+                  </div>
+                  <div
+                    className="settings-nav-item"
+                    onClick={() => navigate("/settings/account-security/security-questions")}
+                  >
+                    <div className="nav-item-content">
+                      <div className="nav-text">Security Questions</div>
+                    </div>
                   </div>
                 </div>
-                <div
-                  className="settings-nav-item"
-                  onClick={() => navigate("/settings/account-security")}
-                >
-                  <div className="nav-item-content">
-                    <div className="nav-text">Two-Factor Authentication</div>
-                  </div>
-                </div>
-                <div
-                  className="settings-nav-item"
-                  onClick={() => navigate("/settings/account-security")}
-                >
-                  <div className="nav-item-content">
-                    <div className="nav-text">Security Questions</div>
-                  </div>
-                </div>
-              </div>
-            )}
+              )}
+
           </div>
 
           {/* Other settings */}
@@ -146,7 +146,7 @@ const Sidebar = () => {
 
           <div
             className="settings-nav-item"
-            onClick={() => navigate("/support-and-help")}
+            onClick={() => navigate("/settings/support")}
           >
             <div className="nav-item-content">
               <div className="nav-text">Support and Help</div>

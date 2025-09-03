@@ -1,0 +1,119 @@
+.content {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  background: #0077b6;
+  border-radius: 50%;
+}
+
+.breadcrumb {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.back-arrow {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.breadcrumb-active {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.breadcrumb-link {
+  color: #000;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+  font-size: 18px;
+}
+
+/* Toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0077b6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.form-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
