@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
+import dashboardIcon from "../assets/icons/dashboardIcon.png";
+import visitsIcon from "../assets/icons/visitsIcon.png";
+import recordsIcon from "../assets/icons/recordsIcon.png";
+import billingIcon from "../assets/icons/billingIcon.png";
+import settingsIcon from "../assets/icons/settingsIcon.png";
+import logoutIcon from "../assets/icons/logoutIcon.png";
+
 
 const Sidebar = () => {
   const [showSettings, setShowSettings] = useState(false);
@@ -22,19 +29,23 @@ const Sidebar = () => {
       </div>
 
       {/* Main navigation */}
-      {["Dashboard", "Recent Visits", "Medical Records", "Billing"].map(
-        (item) => (
-          <div
-            key={item}
-            className="nav-item"
-            onClick={() => navigate(`/${item.toLowerCase().replace(" ", "-")}`)}
-          >
-            <div className="nav-item-content">
-              <div className="nav-text">{item}</div>
-            </div>
+      {[
+        { name: "Dashboard", path: "/dashboard", icon: dashboardIcon },
+        { name: "Recent Visits", path: "/recent-visits", icon: visitsIcon },
+        { name: "Medical Records", path: "/medical-records", icon: recordsIcon },
+        { name: "Billing", path: "/billing", icon: billingIcon },
+      ].map((item) => (
+        <div
+          key={item.name}
+          className="nav-item"
+          onClick={() => navigate(item.path)}
+        >
+          <div className="nav-item-content">
+            <img src={item.icon} alt={item.name} className="nav-icon" />
+            <div className="nav-text">{item.name}</div>
           </div>
-        )
-      )}
+        </div>
+      ))}
 
       {/* Settings toggle */}
       <div
@@ -42,6 +53,7 @@ const Sidebar = () => {
         onClick={() => setShowSettings(!showSettings)}
       >
         <div className="nav-item-content">
+          <img src={settingsIcon} alt="Settings" className="nav-icon" />
           <div className="nav-text">Settings</div>
           <span className="toggle-arrow">{showSettings ? "▲" : "▼"}</span>
         </div>
@@ -155,9 +167,10 @@ const Sidebar = () => {
         </div>
       )}
 
-      {/* Logout at the bottom */}
+      {/* Logout */}
       <div className="nav-item logout-button" onClick={handleLogout}>
         <div className="nav-item-content">
+          <img src={logoutIcon} alt="Logout" className="nav-icon" />
           <div className="nav-text">Logout</div>
         </div>
       </div>

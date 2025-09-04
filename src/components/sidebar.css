@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
 .sidebar {
   width: 280px;
   background: #e8f4f8;
@@ -34,6 +36,7 @@
   font-size: 24px;
   font-weight: 600;
   color: #2e86ab;
+  font-family: 'Aclonica', sans-serif; 
 }
 
 .nav-item {
@@ -94,7 +97,13 @@
 .nav-item-content {
   display: flex;
   align-items: center;
-  width: 100%;
+  gap: 12px;
+}
+
+.nav-icon {
+  width: 65px;
+  height: 65px;
+  display: block;
 }
 
 /* Toggle arrow */

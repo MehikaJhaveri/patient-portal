@@ -1,9 +1,3 @@
-/* Top band */
-.top-band {
-    height: 60px;
-    background: linear-gradient(135deg, #2e86ab 0%, #1e5f7a 100%);
-}
-
 /* Main container */
 .main-container {
     display: flex;
