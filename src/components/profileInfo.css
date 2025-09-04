@@ -67,7 +67,6 @@
 /* Profile Information Section */
 .profile-section {
     margin-bottom: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .section-title {
@@ -77,17 +76,13 @@
     margin-bottom: 25px;
 }
 
-.demographics-section,
-.contact-section,
-.insurance-section,
-.allergy-section {
-    margin-bottom: 20px;
-}
-
+/* Toggle Buttons */
 .demographics-btn,
 .contact-btn,
 .insurance-btn,
-.allergy-btn {
+.allergy-btn,
+.family-history-btn,
+.social-history-btn {
     background: #2e86ab;
     color: white;
     border: none;
@@ -96,7 +91,7 @@
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(46, 134, 171, 0.2);
 }
@@ -104,16 +99,21 @@
 .demographics-btn:hover,
 .contact-btn:hover,
 .insurance-btn:hover,
-.allergy-btn:hover {
+.allergy-btn:hover,
+.family-history-btn:hover,
+.social-history-btn:hover {
     background: #1e5f7a;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(46, 134, 171, 0.3);
 }
 
+/* Display Sections */
 .demographics-display,
 .contact-display,
 .insurance-display,
-.allergy-display {
+.allergy-display,
+.family-history-display,
+.social-history-display {
     background: #f8f9fa;
     padding: 25px;
     border: 1px solid #e9ecef;
@@ -134,6 +134,7 @@
     }
 }
 
+/* Info Grid */
 .info-grid {
     display: flex;
     flex-direction: column;
@@ -167,13 +168,7 @@
     line-height: 1.4;
 }
 
-/* Insurance Information Styles */
-.insurance-info {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
+/* Insurance Info */
 .insurance-info p {
     margin: 0;
     font-size: 16px;
@@ -190,20 +185,19 @@
 .insurance-info strong {
     font-weight: 600;
     color: #495057;
-    display: inline-block;
     min-width: 200px;
+    display: inline-block;
 }
 
-/* Allergy Styles */
+/* Allergy Grid */
 .allergy-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
+/* Allergy Column */
 .allergy-column {
-    display: flex;
-    flex-direction: column;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -247,90 +241,117 @@
     margin-right: 10px;
 }
 
-/* Next button section */
-.next-section {
-    text-align: right;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #e9ecef;
+/* Family History Grid */
+.family-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
-.next-btn {
-    background: #6c757d;
+/* Family Member Card */
+.family-member {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.family-member-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Genetic Conditions Table */
+.genetic-conditions-table {
+    background: white;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.table-header {
+    background: #2e86ab;
     color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+    font-weight: 600;
+    font-size: 14px;
 }
 
-.next-btn:hover {
-    background: #5a6268;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+.table-header span,
+.table-row span {
+    padding: 12px;
+    border-right: 1px solid #e9ecef;
 }
 
-/* Responsive design */
+.table-header span:last-child,
+.table-row span:last-child {
+    border-right: none;
+}
+
+.table-row {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+/* Social History Grid */
+.social-history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.social-history-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social-history-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.social-history-column .info-grid {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .main-container {
-        flex-direction: column;
-    }
-    
-    .content {
-        padding: 20px;
-        height: auto;
-    }
-    
-    .content-header {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-    
-    .search-container {
-        position: static;
-        transform: none;
-        width: 100%;
-    }
-    
-    .search-box {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .page-title {
-        font-size: 28px;
-    }
-    
-    .info-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .info-label {
-        min-width: auto;
-        font-weight: 600;
-    }
-    
-    .allergy-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .demographics-display,
-    .contact-display,
-    .insurance-display,
-    .allergy-display {
-        padding: 20px;
-    }
-    
-    .insurance-info strong {
-        min-width: auto;
-        display: block;
-        margin-bottom: 4px;
-    }
+    .main-container { flex-direction: column; }
+    .content { padding: 20px; height: auto; }
+    .content-header { flex-direction: column; gap: 20px; align-items: flex-start; }
+    .search-container { position: static; transform: none; width: 100%; }
+    .search-box { width: 100%; }
+    .page-title { font-size: 28px; }
+    .info-row { flex-direction: column; gap: 5px; }
+    .info-label { min-width: auto; font-weight: 600; }
+    .allergy-grid, .social-history-grid, .family-members-grid { grid-template-columns: 1fr; gap: 20px; }
+    .demographics-display, .contact-display, .insurance-display, .allergy-display, .family-history-display, .social-history-display { padding: 20px; }
+    .insurance-info strong { min-width: auto; display: block; margin-bottom: 4px; }
+    .genetic-conditions-table { overflow-x: auto; }
 }

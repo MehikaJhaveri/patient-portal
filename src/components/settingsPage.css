@@ -225,6 +225,155 @@
     background: #d0d0d0;
 }
 
+/* Family History and Social History Sections */
+.family-history-section,
+.social-history-section {
+    margin-bottom: 20px;
+}
+
+.family-history-btn,
+.social-history-btn {
+    background: #2e86ab;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.family-history-btn:hover,
+.social-history-btn:hover {
+    background: #1e5f7a;
+}
+
+.family-history-display,
+.social-history-display {
+    background: #f8f9fa;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Family History Styles */
+.family-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.family-member {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.family-member-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Genetic Conditions Table */
+.genetic-conditions-section {
+    margin-top: 25px;
+}
+
+.genetic-conditions-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin-bottom: 15px;
+}
+
+.genetic-conditions-table {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+    background: #2e86ab;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table-header span {
+    padding: 15px 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table-header span:last-child {
+    border-right: none;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row span {
+    padding: 15px 12px;
+    border-right: 1px solid #ddd;
+    color: #333;
+    line-height: 1.4;
+}
+
+.table-row span:last-child {
+    border-right: none;
+}
+
+/* Social History Styles */
+.social-history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.social-history-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social-history-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin: 0 0 15px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.social-history-column .info-grid {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: -15px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .main-container {
@@ -267,5 +416,36 @@
     .allergy-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+    
+    /* Family History responsive */
+    .family-members-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .genetic-conditions-table {
+        overflow-x: auto;
+    }
+    
+    .table-header,
+    .table-row {
+        grid-template-columns: repeat(5, minmax(120px, 1fr));
+        min-width: 600px;
+    }
+    
+    /* Social History responsive */
+    .social-history-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .demographics-display,
+    .contact-display,
+    .insurance-display,
+    .allergy-display,
+    .family-history-display,
+    .social-history-display {
+        padding: 20px;
     }
 }
