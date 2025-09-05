@@ -9,22 +9,33 @@
   z-index: 1000;
 }
 
-/* Main app layout */
+/* App layout wrapper */
 .app-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
 }
 
-/* Content below the blue band */
+/* Scrollable content area below the fixed top band */
 .layout-content {
-  display: flex;
-  margin-top: 60px; /* Space for the fixed blue band */
-  min-height: calc(100vh - 60px);
+  display: flex;           /* row layout for sidebar + main content */
+  flex: 1;                 /* take remaining height */
+  margin-top: 60px;        /* space for fixed top band */
+  overflow: hidden;        /* prevent unwanted scroll on entire row */
+}
+
+/* Sidebar area */
+.sidebar {
+  width: 250px;            /* adjust as needed */
+  background: #f1f3f4;
+  overflow-y: auto;        /* scroll sidebar if content exceeds height */
+  flex-shrink: 0;          /* prevent shrinking */
 }
 
 /* Main content area */
 .main-content {
-  flex: 1;
-  overflow-x: auto;
+  flex: 1;                 /* take remaining horizontal space */
+  overflow-y: auto;        /* scroll vertically */
+  padding: 20px;
+  box-sizing: border-box;
 }
