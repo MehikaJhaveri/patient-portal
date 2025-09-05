@@ -13,7 +13,7 @@
 .app-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh; /* full viewport height */
 }
 
 /* Scrollable content area below the fixed top band */
@@ -21,21 +21,29 @@
   display: flex;           /* row layout for sidebar + main content */
   flex: 1;                 /* take remaining height */
   margin-top: 60px;        /* space for fixed top band */
-  overflow: hidden;        /* prevent unwanted scroll on entire row */
+  overflow: hidden;        /* no extra scroll on the row */
 }
 
-/* Sidebar area */
+/* Sidebar */
 .sidebar {
-  width: 250px;            /* adjust as needed */
+  width: 250px;           
   background: #f1f3f4;
-  overflow-y: auto;        /* scroll sidebar if content exceeds height */
-  flex-shrink: 0;          /* prevent shrinking */
+  overflow-y: auto;        /* scroll if sidebar is long */
+  flex-shrink: 0;
+  border-right: 1px solid #dee2e6;
+  padding: 20px;
 }
 
 /* Main content area */
 .main-content {
-  flex: 1;                 /* take remaining horizontal space */
-  overflow-y: auto;        /* scroll vertically */
-  padding: 20px;
+  flex: 1;                 
+  overflow-y: auto;        /* vertical scroll */
+  padding: 30px 40px;
   box-sizing: border-box;
+  background: #f8f9fa;
+}
+
+/* Optional: smooth scroll */
+.main-content, .sidebar {
+  scroll-behavior: smooth;
 }

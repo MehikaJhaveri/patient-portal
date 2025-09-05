@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./changePassword.css";
 
 const ChangePassword = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const ChangePassword = () => {
   };
 
   return (
-    <div>
+    <div className="change-password-container">
       <h2>Change Password</h2>
       <label>Current Password</label>
       <input
