@@ -208,6 +208,25 @@
     background: #1e5f7a;
 }
 
+.clinical-summary {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #212529;
+}
+
+.clinical-summary p {
+  margin-bottom: 10px;
+}
+
+.clinical-summary strong {
+  color: #2e86ab;
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     .recent-visits-container {

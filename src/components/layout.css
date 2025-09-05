@@ -26,13 +26,17 @@
 
 /* Sidebar */
 .sidebar {
-  width: 250px;           
-  background: #f1f3f4;
-  overflow-y: auto;        /* scroll if sidebar is long */
+  width: 280px;           
+  background: #e8f4f8;
+  overflow-y: auto;        
   flex-shrink: 0;
-  border-right: 1px solid #dee2e6;
-  padding: 20px;
+  border-right: 1px solid #d1e8f0;
+  padding: 0;              /* remove top padding */
+  height: 100vh;           /* full viewport height */
+  position: sticky;        /* keep sidebar in place */
+  top: 0;                  /* align with top blue band */
 }
+
 
 /* Main content area */
 .main-content {

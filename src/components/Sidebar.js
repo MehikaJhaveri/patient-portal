@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
+import logo from "../assets/icons/logo.png";
 import dashboardIcon from "../assets/icons/dashboardIcon.png";
 import visitsIcon from "../assets/icons/visitsIcon.png";
 import recordsIcon from "../assets/icons/recordsIcon.png";
@@ -24,7 +25,7 @@ const Sidebar = () => {
     <div className="sidebar">
       {/* Header */}
       <div className="sidebar-header">
-        <div className="logo">SP</div>
+        <img src={logo} alt="Logo" className="logo" />
         <div className="header-title">SSPD Patient Portal</div>
       </div>
 
@@ -86,7 +87,6 @@ const Sidebar = () => {
               </div>
             </div>
 
-            {/* Nested sub-options */}
             {/* Nested sub-options */}
               {showSecurityOptions && (
                 <div className="sub-options">

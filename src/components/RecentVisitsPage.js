@@ -9,6 +9,17 @@ const visitsData = [
   { date: "28 Jan 2024", purpose: "Regular Checkup", doctor: "Dr. SM John" },
 ];
 
+// Sample clinical summary (from the image)
+const clinicalSummary = {
+  chiefComplaints: "Patient reports experiencing persistent headaches and dizziness for the past week.",
+  hpi: "Patient states that headaches started gradually and have been accompanied by nausea and occasional blurred vision. No history of recent head trauma.",
+  pmh: "Patient has a history of hypertension diagnosed two years ago. No history of surgeries or hospitalizations.",
+  medicationHistory: "Patient is currently taking lisinopril 10 mg once daily for hypertension control.",
+  testResults: "Recent blood pressure readings indicate elevated levels consistently above 140/90 mmHg.",
+  reminders: "Patient has an upcoming appointment for a follow-up blood pressure check.",
+  planCare: "Increase lisinopril dosage to 20 mg once daily. Advise patient to monitor blood pressure regularly and report any significant changes or adverse effects."
+};
+
 const RecentVisitsPage = () => {
   const [activeTab, setActiveTab] = useState("Recent Visits");
 
@@ -85,6 +96,17 @@ const RecentVisitsPage = () => {
           ))}
         </div>
       )}
+
+      {/* Clinical Summary Section */}
+      <div className="clinical-summary">
+        <p><strong>Chief Complaints:</strong> {clinicalSummary.chiefComplaints}</p>
+        <p><strong>HPI:</strong> {clinicalSummary.hpi}</p>
+        <p><strong>PMH:</strong> {clinicalSummary.pmh}</p>
+        <p><strong>Medication History:</strong> {clinicalSummary.medicationHistory}</p>
+        <p><strong>Tests Results:</strong> {clinicalSummary.testResults}</p>
+        <p><strong>Reminders/ Alerts:</strong> {clinicalSummary.reminders}</p>
+        <p><strong>Plan Care:</strong> {clinicalSummary.planCare}</p>
+      </div>
 
       <button className="next-btn">Next</button>
     </div>
