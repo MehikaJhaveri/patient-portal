@@ -189,12 +189,25 @@ html, body {
 /* Table for genetic conditions */
 .genetic-conditions-table {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr 1.2fr 1fr;
-    gap: 1px;
+    grid-template-columns: 1fr 1fr 1.5fr 1.2fr 1fr; /* same as before */
     background: #dee2e6;
     border-radius: 6px;
     overflow: hidden;
 }
+
+.genetic-conditions-section {
+    width: 100%;
+    overflow-x: auto; /* in case content is wide */
+}
+
+.table-header {
+    display: contents; /* allows its spans to align with the grid columns */
+}
+
+.table-row {
+    display: contents; /* ensures each span falls into the grid column below the header */
+}
+
 
 .table-header span {
     background: #2e86ab;
