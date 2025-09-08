@@ -94,7 +94,6 @@ const MedicalRecordsPage = () => {
             className="search-box"
           />
         </div>
-        <div className="profile-circle"></div>
       </div>
 
       {/* Tabs */}
@@ -159,10 +158,6 @@ const MedicalRecordsPage = () => {
       {activeTab === "Current Records"
         ? renderRecords(currentRecordsData)
         : renderRecords(historicalRecordsData)}
-
-      <div className="next-section">
-        <button className="next-btn">Next</button>
-      </div>
     </div>
   );
 };

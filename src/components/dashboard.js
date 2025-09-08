@@ -13,10 +13,9 @@ const Dashboard = () => {
             className="search-box"
           />
         </div>
-        <div className="profile-circle"></div>
       </div>
 
-      <p className="welcome-text">Welcome, [Patient Name]</p>
+      <p className="welcome-text">Welcome, Carl</p>
 
       <div className="content-grid">
         {/* Recent Visits */}
@@ -40,7 +39,7 @@ const Dashboard = () => {
                       console.log("View more clicked for", date)
                     }
                   >
-                    View More ∨
+                    View More 
                   </button>
                 </div>
               )

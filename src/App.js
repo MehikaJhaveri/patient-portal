@@ -18,6 +18,8 @@ import SecurityQuestions from "./components/SecurityQuestions";
 
 // ✅ Import Support page
 import Support from "./components/Support";  
+// ✅ Import ForgotPassword page
+import ForgotPassword from "./components/ForgotPassword";
 
 import "./App.css";
 
@@ -28,7 +30,8 @@ function App() {
         <Routes>
           {/* Login route (no sidebar) */}
           <Route path="/" element={<Login />} />
-
+          {/* Forgot Password route (no sidebar) */}
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           {/* All other routes use Layout (with sidebar) */}
           <Route path="/" element={<Layout />}>
             <Route path="dashboard" element={<Dashboard />} />

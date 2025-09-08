@@ -4,9 +4,9 @@
   width: 280px;
   background: #e8f4f8;
   border-right: 1px solid #d1e8f0;
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Fixed header */
@@ -16,11 +16,11 @@
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #d1e8f0;
-  flex-shrink: 0; /* prevents shrinking */
-  background: #e8f4f8; /* same as sidebar */
-  position: sticky; /* stays in place */
-  top: 0; /* stick to top */
-  z-index: 10; /* above scrollable content */
+  background: #e8f4f8;
+  position: relative;
+  z-index: 10;
+  height: 100px; /* Fixed height */
+  box-sizing: border-box;
 }
 
 .logo {
@@ -43,12 +43,21 @@
   font-family: 'Aclonica', sans-serif; 
 }
 
-/* Scrollable nav container */
-.sidebar-content {
-  flex: 1;
+/* Scrollable nav container - COMPLETELY REWRITTEN */
+.sidebar-scroll {
+  position: absolute;
+  top: 100px; /* height of header */
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-content {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
 }
 
 /* Navigation items */
@@ -78,7 +87,6 @@
 .settings-subnav {
   border-top: 1px solid #d1e8f0;
   background: #f0f8fc;
-  flex-grow: 1;
 }
 
 .settings-nav-item {
@@ -111,6 +119,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
 .nav-icon {
@@ -144,6 +153,12 @@
   background-color: #eaf4f8;
 }
 
+/* Logout button */
 .logout-button {
-  margin-top: auto;
+  border-top: 1px solid #d1e8f0;
+  background: #e8f4f8;
+}
+
+.logout-button:hover {
+  background-color: #d1e8f0;
 }

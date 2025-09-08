@@ -11,7 +11,6 @@ const AccountSecurity = () => {
         <div className="search-container">
           <input type="text" className="search-box" placeholder="Search..." />
         </div>
-        <div className="profile-circle"></div>
       </div>
 
       {/* ✅ Render nested pages here */}

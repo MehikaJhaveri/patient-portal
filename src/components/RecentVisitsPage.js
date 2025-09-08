@@ -34,7 +34,6 @@ const RecentVisitsPage = () => {
             className="search-box"
           />
         </div>
-        <div className="profile-circle"></div>
       </div>
 
       <p className="welcome-text">Your recent medical visits</p>
@@ -108,7 +107,6 @@ const RecentVisitsPage = () => {
         <p><strong>Plan Care:</strong> {clinicalSummary.planCare}</p>
       </div>
 
-      <button className="next-btn">Next</button>
     </div>
   );
 };

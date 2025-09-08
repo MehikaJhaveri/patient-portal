@@ -41,6 +41,10 @@ const Login = () => {
             required
           />
 
+          <p className="forgot-password" onClick={() => navigate("/forgot-password")}>
+            Forgot Password?
+          </p>
+
           {error && <p className="error">{error}</p>}
 
           <button type="submit">Log in</button>

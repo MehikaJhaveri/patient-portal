@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./profileInfo.css";
 
 const profileData = {
-  name: "Sam Finley John",
+  name: "Carl Finley John",
   dob: "02/10/1990",
   gender: "Male",
   address: "728 Clearview Drive, Lakewood, 80227, Colorado, United States",
@@ -177,7 +177,6 @@ const ProfileInfo = () => {
               className="search-bar"
             />
           </div>
-          <div className="profile-circle"></div>
         </div>
 
         <h2 className="section-title">Profile Information</h2>
