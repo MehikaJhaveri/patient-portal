@@ -1,0 +1,221 @@
+/* Medical Records container */
+.medical-records-container {
+    flex: 1;
+    padding: 40px;
+    background: white;
+    position: relative;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Content header */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+
+.search-box:focus {
+    border-color: #2e86ab;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    padding: 15px 25px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+}
+
+.tab.active {
+    color: #2e86ab;
+    border-bottom-color: #2e86ab;
+    font-weight: 600;
+}
+
+.tab:hover:not(.active) {
+    color: #2e86ab;
+}
+
+/* Vitals Section */
+.vitals-section {
+    margin-bottom: 25px;
+}
+
+.vitals-btn {
+    background: #2e86ab;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.vitals-btn:hover {
+    background: #1e5f7a;
+}
+
+.vitals-display {
+    background: #f8f9fa;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.vitals-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.vitals-list li {
+    padding: 5px 0;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Medical Records List */
+.medical-records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 60vh;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.medical-record-item {
+    background: white;
+    padding: 25px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.medical-record-item:last-child {
+    border-bottom: none;
+}
+
+.record-content {
+    flex: 1;
+}
+
+.record-content p {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.record-content p:last-child {
+    margin-bottom: 0;
+}
+
+.record-content strong {
+    font-weight: 600;
+}
+
+.record-date {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+
+/* Next button section */
+.next-section {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.next-btn {
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.next-btn:hover {
+    background: #d0d0d0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .medical-records-container {
+        padding: 20px;
+    }
+    
+    .content-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
+}
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .medical-record-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .record-date {
+        margin-left: 0;
+        align-self: flex-end;
+    }
+}

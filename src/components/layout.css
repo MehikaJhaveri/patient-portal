@@ -1,0 +1,53 @@
+/* Top blue band */
+.top-band {
+  height: 60px;
+  background: linear-gradient(135deg, #2e86ab 0%, #1e5f7a 100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* App layout wrapper */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height */
+}
+
+/* Scrollable content area below the fixed top band */
+.layout-content {
+  display: flex;           /* row layout for sidebar + main content */
+  flex: 1;                 /* take remaining height */
+  margin-top: 60px;        /* space for fixed top band */
+  overflow: hidden;        /* no extra scroll on the row */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;           
+  background: #e8f4f8;
+  overflow-y: auto;        
+  flex-shrink: 0;
+  border-right: 1px solid #d1e8f0;
+  padding: 0;              /* remove top padding */
+  height: 100vh;           /* full viewport height */
+  position: sticky;        /* keep sidebar in place */
+  top: 0;                  /* align with top blue band */
+}
+
+
+/* Main content area */
+.main-content {
+  flex: 1;                 
+  overflow-y: auto;        /* vertical scroll */
+  padding: 30px 40px;
+  box-sizing: border-box;
+  background: #f8f9fa;
+}
+
+/* Optional: smooth scroll */
+.main-content, .sidebar {
+  scroll-behavior: smooth;
+}

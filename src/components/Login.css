@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(135deg, #0d47a1 0%, #1976d2 30%, #42a5f5 60%, #81c784 100%);
+  position: relative;
+  overflow: hidden;
+  padding-right: 120px;
+}
+
+/* Heartbeat line effect - more prominent */
+.login-container::before {
+  content: '';
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150"><path d="M0,75 L100,75 L120,45 L140,105 L160,30 L180,120 L200,75 L300,75 L320,45 L340,105 L360,30 L380,120 L400,75 L500,75 L520,45 L540,105 L560,30 L580,120 L600,75 L700,75 L720,45 L740,105 L760,30 L780,120 L800,75 L900,75 L920,45 L940,105 L960,30 L980,120 L1000,75 L1200,75" stroke="rgba(255,255,255,0.6)" stroke-width="3" fill="none"/></svg>');
+  background-size: 1200px 150px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.login-container::after {
+  content: '';
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100"><path d="M0,50 L80,50 L95,25 L110,75 L125,15 L140,85 L155,50 L235,50 L250,25 L265,75 L280,15 L295,85 L310,50 L390,50 L405,25 L420,75 L435,15 L450,85 L465,50 L545,50 L560,25 L575,75 L590,15 L605,85 L620,50 L700,50 L715,25 L730,75 L745,15 L760,85 L775,50 L800,50" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/></svg>');
+  background-size: 800px 100px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  animation: pulse 3s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.login-panel {
+  background: transparent;
+  border-radius: 0;
+  padding: 40px 0;
+  box-shadow: none;
+  text-align: left;
+  width: 400px;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: none;
+}
+
+.login-panel h1 {
+  font-size: 72px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: -10px;
+  letter-spacing: 3px;
+  font-family: 'Aclonica', sans-serif;
+  text-align: center;
+  line-height: 1;
+}
+
+.login-panel h2 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  font-family: 'Aclonica', sans-serif;
+  text-align: center;
+  line-height: 1;
+}
+
+.login-panel form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-panel label {
+  font-size: 20px;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+}
+
+.login-panel label:first-of-type {
+  margin-top: 0;
+}
+
+.login-panel input {
+  padding: 20px 24px;
+  border: 1px solid #000000;
+  border-radius: 0;
+  font-size: 18px;
+  background: #e3f2fd;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-panel input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+  background: #f3f9ff;
+}
+
+.login-panel button {
+  background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+  color: #ffffff;
+  padding: 20px 40px;
+  border: 1px solid #000000;
+  border-radius: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 45px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+  align-self: center;
+  width: 200px;
+}
+
+.login-panel button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(13, 71, 161, 0.5);
+  background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+}
+
+.login-panel button:active {
+  transform: translateY(0);
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #0d47a1;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}

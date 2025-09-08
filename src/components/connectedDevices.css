@@ -1,0 +1,126 @@
+.connectedDevices-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.connectedDevices-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.connectedDevices-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.search-input {
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.device-card {
+  display: flex;
+  align-items: center;
+  background-color: #d6ecf5;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.device-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #0077b6;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.device-info {
+  flex-grow: 1;
+}
+
+.device-name {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+.device-location {
+  font-size: 14px;
+  color: #555;
+}
+
+.device-time {
+  font-size: 12px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.remove-btn {
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.no-devices {
+  font-size: 14px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.save-btn {
+  margin-top: 30px;
+  padding: 8px 20px;
+  background-color: #0077b6;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #005f87;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
+}

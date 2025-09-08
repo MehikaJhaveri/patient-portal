@@ -1,0 +1,248 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;  /* changed from #f8f9fa to white */
+    color: #212529;
+}
+
+/* Header with Settings, Search, and Circle */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+    background: #fff;          /* white background */
+    position: sticky;          /* keep it in place while scrolling */
+    top: 0;
+    z-index: 10;               /* above the content */
+}
+
+
+.settings-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2e86ab;
+}
+
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-box {
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
+}
+
+.search-bar:focus {
+    border-color: #2e86ab;
+    box-shadow: 0 2px 6px rgba(46,134,171,0.2);
+}
+
+.profile-circle {
+    width: 50px;
+    height: 50px;
+    background: #2e86ab;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin-bottom: 25px;
+}
+
+/* Buttons for sections */
+.demographics-btn, 
+.contact-btn, 
+.insurance-btn, 
+.allergy-btn, 
+.family-history-btn, 
+.social-history-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #2e86ab;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+    display: inline-block;      /* keep button width to content */
+    max-width: 250px;           /* prevents stretching */
+    text-align: center;         /* center text */
+}
+
+
+.demographics-btn:hover, 
+.contact-btn:hover, 
+.insurance-btn:hover, 
+.allergy-btn:hover, 
+.family-history-btn:hover, 
+.social-history-btn:hover {
+    background: #1e5f7a;
+    transform: translateY(-1px);
+}
+
+/* Section containers */
+
+/* Profile page container */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-height: 100%;
+    overflow-y: auto;
+    background: #fff; /* ensure container itself is white */
+    padding: 20px;    /* optional: add spacing around content */
+}
+
+/* Info grid */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 180px;
+    margin-right: 15px;
+}
+
+.info-value {
+    flex: 1;
+    color: #212529;
+}
+
+/* Display containers */
+.demographics-display,
+.contact-display,
+.insurance-display,
+.allergy-display,
+.family-history-display,
+.social-history-display {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Grids for allergy/family/social history */
+.allergy-grid,
+.family-members-grid,
+.social-history-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.allergy-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.family-members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.social-history-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Section headers */
+.allergy-title,
+.family-member-title,
+.social-history-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e86ab;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #2e86ab;
+    padding-bottom: 5px;
+}
+
+/* Table for genetic conditions */
+.genetic-conditions-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1.2fr 1fr; /* same as before */
+    background: #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.genetic-conditions-section {
+    width: 100%;
+    overflow-x: auto; /* in case content is wide */
+}
+
+.table-header {
+    display: contents; /* allows its spans to align with the grid columns */
+}
+
+.table-row {
+    display: contents; /* ensures each span falls into the grid column below the header */
+}
+
+
+.table-header span {
+    background: #2e86ab;
+    color: white;
+    font-weight: 600;
+    padding: 12px 10px;
+}
+
+.table-row span {
+    background: #fff;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .social-history-grid {
+        grid-template-columns: 1fr;
+    }
+    .family-members-grid {
+        grid-template-columns: 1fr;
+    }
+    .allergy-grid {
+        grid-template-columns: 1fr;
+    }
+    .search-bar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-row {
+        flex-direction: column;
+    }
+    .info-label {
+        min-width: auto;
+        margin-bottom: 4px;
+    }
+    .genetic-conditions-table {
+        grid-template-columns: 1fr;
+    }
+}

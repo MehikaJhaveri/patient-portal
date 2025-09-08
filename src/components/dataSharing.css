@@ -1,0 +1,99 @@
+.dataSharing-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dataSharing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataSharing-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  outline: none;
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dataSharing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 16px;
+  color: #111;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0077b6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.save-btn {
+  margin-top: 30px;
+  padding: 8px 20px;
+  background-color: #0077b6;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background-color: #005f87;
+}

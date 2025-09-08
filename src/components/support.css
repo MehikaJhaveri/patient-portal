@@ -1,0 +1,130 @@
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply Roboto globally */
+body, h1, h2, h3, p, ul, li, div, button, input, label {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Main container */
+.support-container {
+    max-width: 600px;
+    margin: 40px 20px;
+    padding: 0;
+    background: transparent;
+}
+
+/* Titles */
+.support-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.support-subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: #555;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Input container */
+.support-input-container {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 20px 0;
+}
+
+/* Input field */
+.support-input {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border 0.2s ease-in-out;
+}
+
+.support-input:focus {
+    border-color: #1976d2;
+}
+
+/* Get Help button */
+.get-help-btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.get-help-btn:hover {
+    background-color: #145a9e;
+}
+
+.get-help-btn:active {
+    background-color: #0f4275;
+}
+
+/* Actions container */
+.support-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start; /* left-aligned buttons */
+    gap: 10px;
+}
+
+/* Save button */
+.save-btn {
+    background-color: #1976d2;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.save-btn:hover {
+    background-color: #145a9e;
+}
+
+.save-btn:active {
+    background-color: #0f4275;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .support-container {
+        margin: 20px 10px;
+    }
+
+    .support-title {
+        font-size: 24px;
+    }
+
+    .support-subtitle {
+        font-size: 20px;
+    }
+
+    .support-input {
+        font-size: 15px;
+    }
+
+    .get-help-btn,
+    .save-btn {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+}
