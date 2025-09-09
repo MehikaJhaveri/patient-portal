@@ -17,14 +17,15 @@
 .search-container {
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .search-box {
   padding: 6px;
   border: 1px solid #000;
   border-radius: 20px;
-  width: 200px;
+  max-width: 80%;
+  width: 800px;
 }
 
 .profile-circle {

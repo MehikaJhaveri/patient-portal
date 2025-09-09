@@ -174,7 +174,7 @@ const ProfileInfo = () => {
             <input 
               type="text" 
               placeholder="Search..." 
-              className="search-bar"
+              className="search-box"
             />
           </div>
         </div>

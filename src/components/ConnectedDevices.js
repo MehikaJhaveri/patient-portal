@@ -18,7 +18,7 @@ const ConnectedDevices = () => {
     <div className="connectedDevices-container">
       <div className="connectedDevices-header">
         <h2>Settings</h2>
-        <input type="text" placeholder="Search..." className="search-input" />
+        <input type="text" placeholder="Search..." className="search-box" />
       </div>
 
       <h3 className="section-title">Connected Devices</h3>

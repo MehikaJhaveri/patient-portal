@@ -14,7 +14,7 @@ const DataSharing = () => {
     <div className="dataSharing-container">
       <div className="dataSharing-header">
         <h2>Settings</h2>
-        <input type="text" placeholder="Search..." className="search-input" />
+        <input type="text" placeholder="Search..." className="search-box" />
       </div>
 
       <h3 className="section-title">Data Sharing</h3>

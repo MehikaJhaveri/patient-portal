@@ -25,18 +25,17 @@
 }
 
 .search-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search-box {
-    padding: 12px 20px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    font-size: 16px;
-    width: 300px;
-    outline: none;
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
 }
 
 .search-box:focus {

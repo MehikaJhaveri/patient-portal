@@ -55,7 +55,7 @@ const vitalsData = {
 
 const MedicalRecordsPage = () => {
   const [activeTab, setActiveTab] = useState("Current Records");
-  const [showVitals, setShowVitals] = useState(false);
+  const [showVitals, setShowVitals] = useState(true);
 
   const renderRecords = (records) => {
     return (

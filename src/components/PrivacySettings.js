@@ -17,7 +17,7 @@ const PrivacySettings = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="search-input"
+          className="search-box"
         />
       </div>
 

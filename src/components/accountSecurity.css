@@ -16,14 +16,17 @@
 }
 
 .search-container {
-  margin-right: auto;
-  margin-left: 20px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .search-box {
-  padding: 6px 12px;
-  border: 1px solid #999;
-  border-radius: 15px;
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  max-width: 80%;
+  width: 800px;
 }
 
 .profile-circle {
