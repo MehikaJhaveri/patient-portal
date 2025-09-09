@@ -1,7 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // <-- import useNavigate
 import "./dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  // Replace the hardcoded array with the June visit
+  const recentVisits = [
+    {
+      date: "28 June 2024",
+      doctor: "Dr. SM John",
+      purpose: "Diabetes Follow-up",
+      visitIndex: 0, // index in visitsData from RecentVisitsPage.js
+    },
+  ];
+
   return (
     <div className="dashboard-container">
       <div className="content-header">
@@ -15,52 +28,38 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <p className="welcome-text">Welcome, Carl</p>
+      <p className="welcome-text">Welcome, Carl Jones</p>
 
       <div className="content-grid">
         {/* Recent Visits */}
         <div className="recent-visits-section">
           <h2 className="section-title">Recent Visits</h2>
           <div className="visits-container">
-            {["28 May 2024", "28 April 2024", "28 March 2024"].map(
-              (date, idx) => (
-                <div className="visit-card" key={idx}>
-                  <div className="visit-info">
-                    <div className="visit-label">Date of Visit:</div>
-                    <div className="visit-value">{date}</div>
-                    <div className="visit-label">Doctor's Name:</div>
-                    <div className="visit-value">Dr SM John</div>
-                    <div className="visit-label">Purpose of Visit:</div>
-                    <div className="visit-value">Regular Checkup</div>
-                  </div>
-                  <button
-                    className="view-more-btn"
-                    onClick={() =>
-                      console.log("View more clicked for", date)
-                    }
-                  >
-                    View More 
-                  </button>
-                </div>
-              )
-            )}
-          </div>
-        </div>
+            {recentVisits.map((visit, idx) => (
+              <div className="visit-card" key={idx}>
+                <div className="visit-info">
+                  <div className="visit-label">Date of Visit:</div>
+                  <div className="visit-value">{visit.date}</div>
 
-        {/* Health Summary */}
-        <div className="health-summary-section">
-          <h2 className="section-title">Health Summary</h2>
-          <div className="health-summary">
-            <ul className="health-list">
-              <li>Blood Pressure</li>
-              <li>Pulse Rate</li>
-              <li>Respiratory Rate</li>
-              <li>Temperature</li>
-              <li>Height</li>
-              <li>Weight</li>
-              <li>Pain Level</li>
-              <li>SpO2</li>
-            </ul>
+                  <div className="visit-label">Doctor's Name:</div>
+                  <div className="visit-value">{visit.doctor}</div>
+
+                  <div className="visit-label">Purpose of Visit:</div>
+                  <div className="visit-value">{visit.purpose}</div>
+                </div>
+
+                <button
+                  className="view-more-btn"
+                  onClick={() =>
+                    navigate("/recent-visits", {
+                      state: { openVitals: false, visitIndex: visit.visitIndex },
+                    })
+                  }
+                >
+                  View More 
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,13 +1,25 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./medicalRecords.css";
 
+// Current records
+// Current records
 const currentRecordsData = [
+  {
+    date: "28 June 2024",
+    conditions: "Diabetes Mellitus Type 2",
+    medications: "Metformin 500mg twice daily",
+    allergies: "None",
+    recentAssessments: "Updated",
+    visitIndex: 0, // links to visitsData[0] (June visit)
+  },
   {
     date: "28 May 2024",
     conditions: "Hypertension",
     medications: "Amoxicillin 500mg",
     allergies: "Penicillin",
     recentAssessments: "Updated",
+    visitIndex: 1, // links to visitsData[1] (May visit)
   },
   {
     date: "28 April 2024",
@@ -15,47 +27,42 @@ const currentRecordsData = [
     medications: "Amoxicillin 500mg",
     allergies: "Penicillin",
     recentAssessments: "Updated",
+    visitIndex: 2, // links to visitsData[2] (April visit)
   },
 ];
 
+
+// Historical records
 const historicalRecordsData = [
   {
     date: "28 March 2024",
-    conditions: "Hypertension",
-    medications: "Amoxicillin 500mg",
-    allergies: "Penicillin",
+    conditions: "Back Pain",
+    medications: "Ibuprofen 200mg",
+    allergies: "None",
     recentAssessments: "Updated",
+    visitIndex: 3, // links to visitsData
   },
   {
     date: "28 Feb 2024",
-    conditions: "Hypertension",
-    medications: "Amoxicillin 500mg",
-    allergies: "Penicillin",
+    conditions: "Flu Symptoms",
+    medications: "Paracetamol 500mg",
+    allergies: "None",
     recentAssessments: "Updated",
+    visitIndex: 4, // added vitals in visitsData
   },
   {
     date: "28 Jan 2024",
-    conditions: "Hypertension",
-    medications: "Amoxicillin 500mg",
-    allergies: "Penicillin",
+    conditions: "Cold",
+    medications: "None",
+    allergies: "None",
     recentAssessments: "Updated",
+    visitIndex: 5, // added vitals in visitsData
   },
 ];
 
-const vitalsData = {
-  bloodPressure: "120/80 mmHg",
-  pulseRate: "70 beats per minute",
-  respiratoryRate: "6 breaths per minute",
-  temperature: "98.6°F (37°C)",
-  height: "5 feet 10 inches (178 cm)",
-  weight: "160 pounds (73 kg)",
-  bmi: "23.0 (within the normal range)",
-  spO2: "98%",
-};
-
 const MedicalRecordsPage = () => {
   const [activeTab, setActiveTab] = useState("Current Records");
-  const [showVitals, setShowVitals] = useState(true);
+  const navigate = useNavigate();
 
   const renderRecords = (records) => {
     return (
@@ -63,20 +70,31 @@ const MedicalRecordsPage = () => {
         {records.map((record, idx) => (
           <div key={idx} className="medical-record-item">
             <div className="record-content">
-              <p>
-                <strong>Conditions:</strong> {record.conditions}
-              </p>
-              <p>
-                <strong>Medications:</strong> {record.medications}
-              </p>
-              <p>
-                <strong>Allergies:</strong> {record.allergies}
-              </p>
-              <p>
-                <strong>Recent Assessments:</strong> {record.recentAssessments}
-              </p>
+              <p><strong>Conditions:</strong> {record.conditions}</p>
+              <p><strong>Medications:</strong> {record.medications}</p>
+              <p><strong>Allergies:</strong> {record.allergies}</p>
+              <p><strong>Recent Assessments:</strong> {record.recentAssessments}</p>
+              
+              {/* Vitals button moved below content */}
+              <div className="vitals-below-content">
+                {record.visitIndex !== null && (
+                  <button
+                    className="vitals-btn"
+                    onClick={() =>
+                      navigate("/recent-visits", {
+                        state: { openVitals: true, visitIndex: record.visitIndex },
+                      })
+                    }
+                  >
+                    Vitals
+                  </button>
+                )}
+              </div>
             </div>
-            <div className="record-date">{record.date}</div>
+            
+            <div className="record-actions">
+              <div className="record-date">{record.date}</div>
+            </div>
           </div>
         ))}
       </div>
@@ -108,51 +126,6 @@ const MedicalRecordsPage = () => {
           </div>
         ))}
       </div>
-
-      {/* Vitals Button (only show on Current Records) */}
-      {activeTab === "Current Records" && (
-        <div className="vitals-section">
-          <button
-            className="vitals-btn"
-            onClick={() => setShowVitals(!showVitals)}
-          >
-            Vitals
-          </button>
-        </div>
-      )}
-
-      {/* Vitals Display */}
-      {showVitals && activeTab === "Current Records" && (
-        <div className="vitals-display">
-          <ul className="vitals-list">
-            <li>
-              <strong>Blood Pressure:</strong> {vitalsData.bloodPressure}
-            </li>
-            <li>
-              <strong>Pulse Rate:</strong> {vitalsData.pulseRate}
-            </li>
-            <li>
-              <strong>Respiratory Rate:</strong>{" "}
-              {vitalsData.respiratoryRate}
-            </li>
-            <li>
-              <strong>Temperature:</strong> {vitalsData.temperature}
-            </li>
-            <li>
-              <strong>Height:</strong> {vitalsData.height}
-            </li>
-            <li>
-              <strong>Weight:</strong> {vitalsData.weight}
-            </li>
-            <li>
-              <strong>BMI (Body Mass Index):</strong> {vitalsData.bmi}
-            </li>
-            <li>
-              <strong>SpO2 (Oxygen Saturation):</strong> {vitalsData.spO2}
-            </li>
-          </ul>
-        </div>
-      )}
 
       {/* Tab Content */}
       {activeTab === "Current Records"

@@ -75,17 +75,23 @@ body, h1, h2, h3, p, ul, li, div, button {
     margin-bottom: 25px;
 }
 
+.content-grid {
+    width: 100%;
+}
+
 /* Recent Visits */
 .recent-visits-section {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
-.visits-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.recent-visits-section {
+  grid-column: 1 / -1;  /* span full grid */
+  width: 100%;
+  padding-right: 0;     /* remove right padding if applied */
 }
+
 
 .visit-card {
     background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);

@@ -72,6 +72,10 @@
     font-weight: 500;
 }
 
+.vitals-button{
+    border-radius: 0px;
+}
+
 .tab.active {
     color: #2e86ab;
     border-bottom-color: #2e86ab;
@@ -152,9 +156,9 @@
     border: none;
     border-bottom: 1px solid #ddd;
     border-radius: 0;
-    position: relative;
+    /* 🔹 UPDATED: stack items vertically */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; 
     align-items: flex-start;
 }
 
@@ -179,42 +183,94 @@
 }
 
 .visit-date {
-    position: static;
-    right: auto;
-    top: auto;
     font-weight: 600;
     font-size: 16px;
     color: #333;
-    margin: 0 0 0 20px;
+    margin-top: 5px; /* 🔹 UPDATED: placed under purpose/doctor */
     white-space: nowrap;
-    align-self: flex-start;
 }
 
-/* Next button */
-.next-btn {
-    background: #2e86ab;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    float: right;
+/* 🔹 UPDATED: buttons aligned under details */
+.visit-actions {
+    margin-top: 10px;
 }
 
 .next-btn:hover {
     background: #1e5f7a;
 }
 
+.vitals-btn {
+  background: #2e86ab !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 4px !important; /* rectangular look */
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  margin-top: 10px !important;
+  align-self: flex-start !important;
+}
+
+.vitals-btn:hover {
+  background: #1e5f7a !important;
+}
+
+/* Vitals Summary (Vitals Tab) */
+.vitals-summary {
+  background: #f8f9fa;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #212529;
+}
+
+.vitals-summary h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.vitals-summary p {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.vitals-summary strong {
+  color: #2e86ab;
+}
+
+.summary-btn {
+  background: #2e86ab;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px; /* space next to Vitals */
+}
+
+.summary-btn:hover {
+  background: #565e64;
+}
+
+
 .clinical-summary {
   background: #fff;
   border: 1px solid #dee2e6;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 25px;
+  margin-top: 15px;  /* 🔹 NEW: ensures spacing below visit item */
   line-height: 1.6;
   color: #212529;
+  width: 100%;
 }
 
 .clinical-summary p {

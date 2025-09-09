@@ -81,6 +81,8 @@
 /* Vitals Section */
 .vitals-section {
     margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .vitals-btn {
@@ -143,6 +145,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-direction: row; /* Changed from column to row */
 }
 
 .medical-record-item:last-child {
@@ -151,6 +154,7 @@
 
 .record-content {
     flex: 1;
+    margin-right: 20px; /* Add space between content and actions */
 }
 
 .record-content p {
@@ -169,13 +173,21 @@
     font-weight: 600;
 }
 
+.record-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    min-width: 120px; /* Ensure consistent width */
+}
+
 .record-date {
     font-weight: 600;
     font-size: 16px;
     color: #333;
-    margin-left: 20px;
     white-space: nowrap;
-    align-self: flex-start;
+    text-align: right;
+    margin: 0; /* Remove margin */
 }
 
 /* Next button section */
@@ -231,8 +243,20 @@
         gap: 15px;
     }
     
+    .record-content {
+        margin-right: 0;
+    }
+    
+    .record-actions {
+        align-items: flex-end;
+        width: 100%;
+    }
+    
+    .vitals-below-content {
+        justify-content: flex-start;
+    }
+    
     .record-date {
-        margin-left: 0;
-        align-self: flex-end;
+        text-align: right;
     }
 }
