@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 .sidebar {
-  width: 280px;
+  width: 350px;
   background: #e8f4f8;
   border-right: 1px solid #d1e8f0;
   height: 100vh;
@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  border-bottom: 1px solid #d1e8f0;
+  border-bottom: 2px solid #2e86ab;
   background: #e8f4f8;
   position: relative;
   z-index: 10;
@@ -38,10 +38,10 @@
 }
 
 .header-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   color: #2e86ab;
-  font-family: 'Aclonica', sans-serif; 
+  font-family: 'Bricolage Grotesque Variable', sans-serif; 
 }
 
 /* Scrollable nav container - COMPLETELY REWRITTEN */
@@ -61,21 +61,30 @@
   padding-bottom: 20px;
 }
 
-/* Navigation items */
+/* Navigation items - ENHANCED WITH HOVER EFFECTS */
 .nav-item {
   display: flex;
   align-items: center;
   padding: 18px 25px;
-  color: #2e86ab;
+  color: #06425b;
   font-weight: 500;
   font-size: 18px;
-  border-bottom: 1px solid #d1e8f0;
+  border-bottom: 2px solid #2e86ab;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-item:hover {
   background-color: #d1e8f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(46, 134, 171, 0.15);
+  z-index: 2;
+  border-radius: 8px;
+  margin: 2px 8px;
+  padding: 18px 17px; /* Adjust padding to maintain visual consistency */
 }
 
 .nav-item.active {
@@ -84,10 +93,16 @@
   font-weight: 600;
 }
 
-/* Settings subnav */
+.nav-item.active:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(46, 134, 171, 0.2);
+}
+
+/* Settings subnav - ENHANCED */
 .settings-subnav {
-  border-top: 1px solid #d1e8f0;
+  border-top: 2px solid #ffffff;
   background: #f0f8fc;
+  overflow: visible; /* Allow hover effects to show */
 }
 
 .settings-nav-item {
@@ -97,13 +112,22 @@
   color: #2e86ab;
   font-weight: 400;
   font-size: 16px;
-  border-bottom: 1px solid #d1e8f0;
+  border-bottom: 2px solid #8ea6af;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
 }
 
 .settings-nav-item:hover {
   background-color: #e0f0f8;
+  transform: scale(1.03);
+  box-shadow: 0 2px 8px rgba(46, 134, 171, 0.12);
+  z-index: 2;
+  border-radius: 6px;
+  margin: 1px 12px;
+  padding: 15px 23px; /* Adjust padding to maintain visual consistency */
 }
 
 .settings-nav-item.active {
@@ -112,8 +136,14 @@
   font-weight: 500;
 }
 
+.settings-nav-item.active:hover {
+  transform: scale(1.03);
+  box-shadow: 0 2px 8px rgba(46, 134, 171, 0.15);
+}
+
 .account-security-container {
   position: relative;
+  overflow: visible; /* Allow hover effects to show */
 }
 
 .nav-item-content {
@@ -123,10 +153,16 @@
   width: 100%;
 }
 
+/* Enhanced icon hover effect */
 .nav-icon {
   width: 55px;
   height: 55px;
   display: block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
 }
 
 .toggle-arrow {
@@ -134,32 +170,68 @@
   margin-left: auto;
   color: #2e86ab;
   cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-item:hover .toggle-arrow,
+.settings-nav-item:hover .toggle-arrow {
+  transform: scale(1.2);
+}
+
+/* Sub-options with enhanced hover effects */
 .sub-options {
   background: #f8fcff;
-  border-left: 3px solid #d1e8f0;
+  border-left: 3px solid #2e86ab;
   margin: 0;
   padding: 0;
+  overflow: visible; /* Allow hover effects to show */
 }
 
 .sub-options .settings-nav-item {
   font-size: 14px;
   padding: 10px 35px 10px 55px;
   color: #1e5f7a;
-  border-bottom: 1px solid #e8f4f8;
+  border-bottom: 2px solid #2e86ab;
 }
 
 .sub-options .settings-nav-item:hover {
   background-color: #eaf4f8;
+  transform: scale(1.02);
+  box-shadow: 0 1px 6px rgba(46, 134, 171, 0.1);
+  border-radius: 4px;
+  margin: 1px 8px;
+  padding: 10px 27px 10px 47px; /* Adjust padding */
 }
 
-/* Logout button */
+/* Logout button - ENHANCED */
 .logout-button {
-  border-top: 1px solid #d1e8f0;
-  background: #e8f4f8;
+  border-top: 0px solid #2e86ab;
+  background: #d2eef6;
 }
 
 .logout-button:hover {
   background-color: #d1e8f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(46, 134, 171, 0.15);
+  border-radius: 8px;
+  margin: 2px 8px;
+  padding: 18px 17px;
+}
+
+/* Ensure smooth transitions for text */
+.nav-text {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item:hover .nav-text,
+.settings-nav-item:hover .nav-text {
+  font-weight: 600;
+}
+
+/* Add some breathing room for hover effects */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  overflow: visible;
 }

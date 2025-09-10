@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import "@fontsource-variable/bricolage-grotesque";
+
 
 const Login = () => {
   const [username, setUsername] = useState("");

@@ -8,6 +8,8 @@ import recordsIcon from "../assets/icons/recordsIcon.png";
 import billingIcon from "../assets/icons/billingIcon.png";
 import settingsIcon from "../assets/icons/settingsIcon.png";
 import logoutIcon from "../assets/icons/logoutIcon.png";
+import "@fontsource-variable/bricolage-grotesque";
+
 
 const Sidebar = () => {
   const [showSettings, setShowSettings] = useState(false);

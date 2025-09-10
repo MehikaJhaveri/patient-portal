@@ -26,8 +26,8 @@
 
 /* Sidebar */
 .sidebar {
-  width: 280px;           
-  background: #e8f4f8;
+  width: 400px;           
+  background: #d2eef6;
   overflow-y: auto;        
   flex-shrink: 0;
   border-right: 1px solid #d1e8f0;
