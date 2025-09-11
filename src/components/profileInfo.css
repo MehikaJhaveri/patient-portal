@@ -23,7 +23,7 @@ html, body {
 .settings-title {
     font-size: 32px;
     font-weight: 700;
-    color: #2e86ab;
+    color: #000000;
 }
 
 .search-container {
@@ -40,19 +40,6 @@ html, body {
     width: 800px;
 }
 
-.profile-circle {
-    width: 50px;
-    height: 50px;
-    background: #2e86ab;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-}
-
 /* Section titles */
 .section-title {
     font-size: 26px;
@@ -65,12 +52,12 @@ html, body {
 .section-header {
     font-size: 20px;
     font-weight: 600;
-    color: #2e86ab;
+    color: #1976d2;
     margin-bottom: 20px;
     margin-top: 30px;
     padding: 12px 0;
-    border-bottom: 3px solid #2e86ab;
-    background: linear-gradient(90deg, rgba(46, 134, 171, 0.1) 0%, rgba(46, 134, 171, 0.05) 100%);
+    border-bottom: 3px solid #1976d2;
+    background: linear-gradient(90deg, rgba(39, 54, 193, 0.1) 0%, rgba(14, 34, 133, 0.05) 100%);
     padding-left: 15px;
     border-radius: 5px;
 }
@@ -191,10 +178,10 @@ html, body {
 .social-history-column h4 {
     font-size: 18px;
     font-weight: 600;
-    color: #2e86ab;
+    color: #1976d2;
     margin-bottom: 12px;
     margin-top: 20px;
-    border-bottom: 2px solid #2e86ab;
+    border-bottom: 2px solid #1976d2;
     padding-bottom: 5px;
 }
 
@@ -230,9 +217,9 @@ html, body {
 .genetic-conditions-section h4 {
     font-size: 18px;
     font-weight: 600;
-    color: #2e86ab;
+    color: #1976d2;
     margin-bottom: 15px;
-    border-bottom: 2px solid #2e86ab;
+    border-bottom: 2px solid #1976d2;
     padding-bottom: 5px;
 }
 
@@ -245,7 +232,7 @@ html, body {
 }
 
 .table-header span {
-    background: #2e86ab;
+    background: #4f99e4;
     color: white;
     font-weight: 600;
     padding: 12px 10px;

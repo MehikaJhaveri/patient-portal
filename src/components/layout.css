@@ -1,7 +1,7 @@
 /* Top blue band */
 .top-band {
   height: 60px;
-  background: linear-gradient(135deg, #2e86ab 0%, #1e5f7a 100%);
+  background: linear-gradient(135deg, #58a4fc 0%, #1976d2 100%);
   width: 100%;
   position: fixed;
   top: 0;
@@ -27,10 +27,10 @@
 /* Sidebar */
 .sidebar {
   width: 400px;           
-  background: #d2eef6;
+  background: #ffffff;
   overflow-y: auto;        
   flex-shrink: 0;
-  border-right: 1px solid #d1e8f0;
+  border-right: 1px solid #d1d6d8;
   padding: 0;              /* remove top padding */
   height: 100vh;           /* full viewport height */
   position: sticky;        /* keep sidebar in place */

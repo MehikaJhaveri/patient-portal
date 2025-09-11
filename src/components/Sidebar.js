@@ -8,6 +8,9 @@ import recordsIcon from "../assets/icons/recordsIcon.png";
 import billingIcon from "../assets/icons/billingIcon.png";
 import settingsIcon from "../assets/icons/settingsIcon.png";
 import logoutIcon from "../assets/icons/logoutIcon.png";
+// Import your custom arrow icons
+import arrowDownIcon from "../assets/icons/arrowDown.png"; // Add your down arrow icon
+import arrowUpIcon from "../assets/icons/arrowUp.png";     // Add your up arrow icon
 import "@fontsource-variable/bricolage-grotesque";
 
 
@@ -60,7 +63,11 @@ const Sidebar = () => {
             <div className="nav-item-content">
               <img src={settingsIcon} alt="Settings" className="nav-icon" />
               <div className="nav-text">Settings</div>
-              <span className="toggle-arrow">{showSettings ? "▲" : "▼"}</span>
+              <img 
+                src={showSettings ? arrowUpIcon : arrowDownIcon} 
+                alt={showSettings ? "Collapse" : "Expand"} 
+                className="toggle-arrow-icon"
+              />
             </div>
           </div>
 
@@ -84,9 +91,11 @@ const Sidebar = () => {
                 >
                   <div className="nav-item-content">
                     <div className="nav-text">Account Security</div>
-                    <span className="toggle-arrow">
-                      {showSecurityOptions ? "▲" : "▼"}
-                    </span>
+                    <img 
+                      src={showSecurityOptions ? arrowUpIcon : arrowDownIcon} 
+                      alt={showSecurityOptions ? "Collapse" : "Expand"} 
+                      className="toggle-arrow-icon"
+                    />
                   </div>
                 </div>
 

@@ -48,13 +48,6 @@ body, h1, h2, h3, p, ul, li, div, button {
     border-color: #1976d2;
 }
 
-.profile-circle {
-    width: 50px;
-    height: 50px;
-    background: #1976d2;
-    border-radius: 50%;
-}
-
 .welcome-text {
     font-size: 24px;
     color: #666;
@@ -94,7 +87,7 @@ body, h1, h2, h3, p, ul, li, div, button {
 
 
 .visit-card {
-    background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+    background: linear-gradient(135deg, #58a4fc 0%, #1976d2 100%);
     color: white;
     padding: 25px;
     border-radius: 15px;
@@ -135,41 +128,6 @@ body, h1, h2, h3, p, ul, li, div, button {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Health Summary */
-.health-summary-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.health-summary {
-    background: white;
-    border: 2px solid #42a5f5;
-    border-radius: 10px;
-    padding: 30px;
-    height: fit-content;
-}
-
-.health-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.health-list li {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px;
-    position: relative;
-    padding-left: 15px;
-}
-
-.health-list li::before {
-    content: '•';
-    color: #1976d2;
-    font-size: 20px;
-    position: absolute;
-    left: 0;
-}
 
 /* Responsive design */
 @media (max-width: 768px) {

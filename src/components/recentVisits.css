@@ -40,13 +40,6 @@
     border-color: #2e86ab;
 }
 
-.profile-circle {
-    width: 50px;
-    height: 50px;
-    background: #2e86ab;
-    border-radius: 50%;
-}
-
 .welcome-text {
     color: #666;
     font-size: 16px;
@@ -77,8 +70,8 @@
 }
 
 .tab.active {
-    color: #2e86ab;
-    border-bottom-color: #2e86ab;
+    color: #1976d2;
+    border-bottom-color: #1976d2;
     font-weight: 600;
 }
 
@@ -106,7 +99,7 @@
 }
 
 .condition-link {
-    background: #2e86ab;
+    background: #1976d2;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -118,7 +111,7 @@
 }
 
 .condition-link:hover {
-    background: #1e5f7a;
+    background: #4f99e4;
 }
 
 .condition ul {
@@ -200,7 +193,7 @@
 }
 
 .vitals-btn {
-  background: #2e86ab !important;
+  background: #1976d2 !important;
   color: white !important;
   border: none !important;
   padding: 10px 20px !important;
@@ -213,7 +206,7 @@
 }
 
 .vitals-btn:hover {
-  background: #1e5f7a !important;
+  background: #4f99e4 !important;
 }
 
 /* Vitals Summary (Vitals Tab) */
@@ -241,11 +234,11 @@
 }
 
 .vitals-summary strong {
-  color: #2e86ab;
+  color: #1976d2;
 }
 
 .summary-btn {
-  background: #2e86ab;
+  background: #1976d2;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -258,7 +251,7 @@
 }
 
 .summary-btn:hover {
-  background: #565e64;
+  background: #4f99e4;
 }
 
 
@@ -278,7 +271,7 @@
 }
 
 .clinical-summary strong {
-  color: #2e86ab;
+  color: #1976d2;
 }
 
 
