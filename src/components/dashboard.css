@@ -87,7 +87,7 @@ body, h1, h2, h3, p, ul, li, div, button {
 
 
 .visit-card {
-    background: linear-gradient(135deg, #58a4fc 0%, #1976d2 100%);
+    background: linear-gradient(135deg, #1976d2 0%, #58a4fc 100%);
     color: white;
     padding: 25px;
     border-radius: 15px;

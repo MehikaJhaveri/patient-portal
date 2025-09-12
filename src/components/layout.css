@@ -1,7 +1,7 @@
 /* Top blue band */
 .top-band {
   height: 60px;
-  background: linear-gradient(135deg, #58a4fc 0%, #1976d2 100%);
+  background: linear-gradient(135deg, #1976d2 0%, #58a4fc 100%);
   width: 100%;
   position: fixed;
   top: 0;
